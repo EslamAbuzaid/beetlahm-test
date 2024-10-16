@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="website1" content="This is the first practice html+css website">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <title>بيت لحم - فرع الشيخ زايد</title>
+    <style>
+        .btn-behance
+{
+    background: linear-gradient(#00188F, #02005f);
+}
+.btn-behance:hover
+{
+    background: linear-gradient(#002aff, #02005f);
+}
+.btn-bitbucket
+{
+    background: linear-gradient(#00188F, #EC008C);
+}
+.btn-bitbucket:hover
+{
+    background: linear-gradient(#002aff, #EC008C);
+}
+.btn-codepen
+{
+    background: linear-gradient(#008f0c, #034e13);
+}
+.btn-codepen:hover
+{
+    background: linear-gradient(#00ff15, #034e13);
+}
+.btn-deviantart
+{
+    background: linear-gradient(#120e25, #000000);
+}
+.btn-deviantart:hover
+{
+    background: linear-gradient(#413d53, #000000);
+}
+
+
+a.btn-social,
+.btn-social
+{
+    border-radius: 50%;
+    color: #ffffff !important;
+    display: inline-block;
+    height: 54px;
+    line-height: 54px;
+    margin: 8px 4px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .3s;
+    webkit-transition: background-color .3s;
+    width: 54px;
+}
+
+.btn-social .fa,.btn-social i
+{
+    backface-visibility: hidden;
+    moz-backface-visibility: hidden;
+    ms-transform: scale(1);
+    o-transform: scale(1);
+    transform: scale(1);
+    transition: all .25s;
+    webkit-backface-visibility: hidden;
+    webkit-transform: scale(1);
+    webkit-transition: all .25s;
+}
+.btn-social:hover,.btn-social:focus
+{
+    color: #fff;
+    outline: none;
+    text-decoration: none;
+}
+.btn-social:hover .fa,.btn-social:focus .fa,.btn-social:hover i,.btn-social:focus i
+{
+    ms-transform: scale(1.3);
+    o-transform: scale(1.3);
+    transform: scale(1.3);
+    webkit-transform: scale(1.3);
+}
+.btn-social.btn-xs
+{
+    font-size: 9px;
+    height: 24px;
+    line-height: 13px;
+    margin: 6px 2px;
+    width: 24px;
+}
+.btn-social.btn-sm
+{
+    font-size: 13px;
+    height: 36px;
+    line-height: 18px;
+    margin: 6px 2px;
+    width: 36px;
+}
+.btn-social.btn-lg
+{
+    font-size: 22px;
+    height: 72px;
+    line-height: 40px;
+    margin: 10px 6px;
+    width: 72px;
+}
+
+    body{
+        background-color: #000000;
+    }
+    .logo {
+       
+          margin-left: 5px;
+        }
+        
+        .navebar ul li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px; 
+          
+            position: relative; 
+        
+        }
+        
+        .navebar ul li a {
+            text-decoration: none;
+            color:#ffffff;
+            text-transform: capitalize;
+        }
+        
+        .navebar ul li::after{
+            content: '';
+            height: 2px;
+            width: 0; 
+            background: #960000;
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            transition: 0.5s;
+        }
+        
+        .navebar ul li:hover::after {
+            width: 100%;
+        }
+        
+        .content {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            color: white;
+        }
+        
+        .content h1 {
+            text-transform: uppercase;
+            font-size: 40px;
+            margin-top: 80px;
+        }
+        .content p {
+            margin: 20px auto;
+            font-weight: 100;
+            line-height: 25px;
+        }
+        
+        button {
+            
+            width: 150px;
+            height: 40px;
+            padding: 15px 0;
+            text-align: center;
+            margin: 20px 10px;
+            border-radius: 25px;
+            font-weight: bold;
+            border: 2px solid #960000;
+            background: transparent;
+            color:  #ffffff;
+            cursor: pointer;
+            position:relative;
+            overflow: hidden;
+            
+        }
+        
+        span {
+            text-align: center;
+            background: #960000;
+            height: 100%;
+            width: 0;
+            border-radius: 25px;
+            position:absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            transition: 0.5s;
+        
+        }
+        button:hover span {
+            width: 100%;
+        }
+        button:hover {
+            border: none;
+        }
+        
+
+     ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: none;
+        }
+        
+    #related_links li {
+        border-bottom: 1px solid #90bade;
+        margin: 0;
+        }
+
+    li a {
+        display: block;
+        padding: 5px 5px 5px 0.5em;
+        font-size: 24px;
+        color: #fff;
+        text-decoration: none;
+        width: 100%;
+        transition: 1s;
+        }
+
+    li a {
+        width: auto;
+        }
+
+    li a:hover {
+        color: #960000;
+        
+        }
+body {
+    background-color: #000000;
+}
+
+@media (max-width: 768px) {
+    .navebar ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .content h1 {
+        font-size: 30px;
+    }
+
+    .btn-social {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+    }
+
+    .btn-social.btn-lg {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+        line-height: 60px;
+    }
+
+    button {
+        width: 100%;
+        margin: 10px 0;
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .navebar ul li {
+        margin: 0 10px;
+    }
+
+    .content h1 {
+        font-size: 35px;
+    }
+
+    .btn-social {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 20px;
+    }
+
+    button {
+        width: 200px;
+        height: 50px;
+    }
+}
+
+@media (min-width: 1201px) {
+    .navebar ul li {
+        margin: 0 20px;
+    }
+
+    .content h1 {
+        font-size: 40px;
+    }
+
+    .btn-social {
+        width: 54px;
+        height: 54px;
+        line-height: 54px;
+        font-size: 22px;
+    }
+
+    button {
+        width: 250px;
+        height: 60px;
+    }
+}
+
+        </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="navebar">
+            <a href=""><img class="logo" src="images/logo-default1-140x57.png" lazy  width="90px" height="90px"  ></a>
+            
+        </div>
+        <div class="content">
+            <h1>فرع مصر الجديدة</h1>
+            <ul class="list-unstyled text-light nav__block-item">
+                <li class="menu-item" >
+                    <a href="https://www.google.com/maps/place/%D8%A8%D9%8A%D8%AA+%D9%84%D8%AD%D9%85+%7C+Beet+Lahm%E2%80%AD/@30.0935008,31.3220436,17z/data=!3m1!4b1!4m6!3m5!1s0x14583fbb9e3bde0b:0x5120801f217cfc86!8m2!3d30.0935008!4d31.3220436!16s%2Fg%2F11tn4rbztf?entry=ttu&g_ep=EgoyMDI0MTAxMy4wIKXMDSoASAFQAw%3D%3D"class="link-over" target="_blank">
+                        ١٩ شارع بطرس غالى الكوربه ناصية شارع ابراهيم    <i class="fa-solid fa-location-dot"></i>                
+                    </a>  
+                </li>
+                <li class="menu-item">
+                    <a href="https://mail.google.com/mail/u/0/#sent?compose=GTvVlcSKjRRQwqqbFwKSpHfCsLckkJNsCHjHzJsZgTndHjkTwdnXGzFmHkTMwFTTXTfpsZrbGJFdG" class="link-over" target="_blank">
+                         beetlahmrestaurant@gmail.com <i class="fa-solid fa-envelope"></i></a> 
+                </li>
+                <li class="menu-item">
+                    <a href="tel:+201288800022"class="link-over">+20 128 880 0022  : الخط الساخن <i class="fa-solid fa-phone-volume"></i></a>  </i>
+                </li>							
+                <li class="menu-item">
+                    <a href="#"class="link-over" > </a> 
+                </li>
+            </ul>
+            <div class="container">
+                <div class="row">
+                <br/><br/>
+                <div class="col-md-12">
+            
+                    <a href="https://www.facebook.com/beetlahm" target="_blank" class="btn-social btn-behance"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/beetlahm?fbclid=IwY2xjawF6WgRleHRuA2FlbQIxMAABHYe74DCE0cF0iZWTZJF-UY9I691RBMtR0nWb5-WOMfouXvmGamWTeyVahA_aem_KFWb484vcOuwcEnl83FDpg" target="_blank" class="btn-social btn-bitbucket"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/+201288800022" target="_blank" class="btn-social btn-codepen"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.tiktok.com/@beetlahm?fbclid=IwY2xjawF6TatleHRuA2FlbQIxMAABHb5ITcx7ttd8cAVKUzw2M2fd6Bp3jo7E5zT2GH6zxHQw9avKnFDgkYHxUA_aem_XGG7FGlqPHJUKNEJZpF8kQ" target="_blank" class="btn-social btn-deviantart"><i class="fa-brands fa-tiktok"></i></a>
+                    
+                </div>
+            
+            
+            </div>
+            </div>
+            <div>
+                <a href="menu/menu-egy.html"> <button type="button"><span></span>قائمة الطعام </button></a>
+                <a href="menu/catalog.html"> <button type="button"><span></span>الأطباق الرئيسية</button></a>
+            </div>
+        </div>
+    </div>
+    <script src="js/all.min.js"></script>
+</body>
+</html>

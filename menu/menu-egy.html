@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>بيت لحم-منيو مصر</title>
+	<link rel="stylesheet" href="catalog/fontawesome/css/all.min.css"> 
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> 
+	<link href="catalog/css/magnific-popup.min.css" rel="stylesheet">
+    <link href="catalog/css/tooplate-style.css" rel="stylesheet">
+	<link rel="stylesheet" href="catalog/css/style.css">
+	<link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+	
+</head>
+<body style="background-color: rgb(0, 0, 0);font-family: Noto Sans Arabic, sans-serif;">
+	
+    <h1 hidden>بيت لحم - منيو مصر</h1>
+	<div class="tm-container-fluid" >
+		<section style="background-color: rgba(255, 253, 253, 0);" class=" tm-flex-left tm-mb-50 tm-bgcolor-1 tm-border-rounded">
+				<a href="#">		<img src="images/logo.png" style="width: 150px;" ></a>
+		</section>
+
+		<div class="tm-gallery-section tm-mb-80">
+
+			<ul class="filters-button-group tm-mb-40" style="width: 100%;text-align: center;">
+
+				<li><a href="#" style="color: rgb(255, 0, 0);font-size: 40px; font-weight: bolder;" class="active" data-filter="*">منيو مصر</a></li>
+			</ul>
+
+			<div class="tm-gallery" style="align-items: center;">	
+
+				<div class="tm-gallery-item buffet">
+		            <a href="images/menu/WhatsApp Image 2024-10-02 at 4.41.05 PM (1).jpeg">
+		            	<img src="images/menu/WhatsApp Image 2024-10-02 at 4.41.05 PM (1).jpeg" alt="garden Scape" class="img-fluid" />
+		            </a>
+		        </div>
+
+				<div class="tm-gallery-item buffet">
+		            <a href="images/menu/WhatsApp Image 2024-10-02 at 4.41.05 PM (2).jpeg">
+		            	<img src="images/menu/WhatsApp Image 2024-10-02 at 4.41.05 PM (2).jpeg" alt="garden Scape" class="img-fluid" />
+		            </a>
+		        </div>
+
+				<div class="tm-gallery-item buffet">
+		            <a href="images/menu/WhatsApp Image 2024-10-02 at 4.41.05 PM (3).jpeg">
+		            	<img src="images/menu/WhatsApp Image 2024-10-02 at 4.41.05 PM (3).jpeg" alt="garden Scape" class="img-fluid" />
+		            </a>
+		        </div>
+
+				<div class="tm-gallery-item buffet">
+		            <a href="images/menu/WhatsApp Image 2024-10-02 at 4.41.05 PM (4).jpeg">
+		            	<img src="images/menu/WhatsApp Image 2024-10-02 at 4.41.05 PM (4).jpeg" alt="garden Scape" class="img-fluid" />
+		            </a>
+		        </div>
+
+				<div class="tm-gallery-item buffet">
+		            <a href="images/menu/WhatsApp Image 2024-10-02 at 4.41.06 PM (5).jpeg">
+		            	<img src="images/menu/WhatsApp Image 2024-10-02 at 4.41.06 PM (5).jpeg" alt="garden Scape" class="img-fluid" />
+		            </a>
+		        </div>
+
+		</div>
+
+		
+
+		
+	</div>
+	
+	<script src="catalog/js/jquery.min.js"></script>
+	<script src="catalog/js/imagesloaded.pkgd.min.js"></script>
+	<script src="catalog/js/isotope.pkgd.min.js"></script>
+	<script src="catalog/js/jquery.magnific-popup.min.js"></script>
+	<script src="catalog/js/main.js"></script>
+	<script>
+		$(function(){
+		  	var $gallery = $(".tm-gallery").isotope({
+		    	itemSelector: ".tm-gallery-item",
+		    	layoutMode: "fitRows"
+		  	});
+		  
+		  	$gallery.imagesLoaded().progress(function() {
+		    	$gallery.isotope("layout");
+		  	});
+
+		  	$(".filters-button-group").on("click", "a", function(e) {
+		  		e.preventDefault();
+			    var filterValue = $(this).attr("data-filter");
+			    $gallery.isotope({ filter: filterValue });
+			    $('.filters-button-group a').removeClass('active');
+			    $(this).addClass('active');
+			});
+
+		  	$('.tm-gallery').magnificPopup({
+		  		delegate: 'a',
+			  	type: 'image',
+				  gallery: { enabled: true }
+			});
+		});
+	</script>
+</body>
+</html>
